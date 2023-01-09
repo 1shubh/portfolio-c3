@@ -16,8 +16,22 @@
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "framer-motion": "^8.2.4",
+    "netlify": "^13.1.0",
     "next": "13.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
+  },
+  "homepage": "http://.",
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1shubh/portfolio-c3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1shubh/portfolio-c3/issues"
   }
 }
