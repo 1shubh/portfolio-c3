@@ -1,11 +1,11 @@
 import { Box, Heading,Text } from '@chakra-ui/react'
 import Link from "next/link"
 import React, { useEffect, useState } from 'react'
-const username = "1shubh"
+// const username = "1shubh"
 const ProjectsFolder = () => {
     const [data,setData] = useState([])
     const getData = async() => {
-        let res = await fetch(`https://api.github.com/search/repositories?q=user:${username}+fork:true&sort=updated&per_page=10&type=Repositories`);
+        let res = await fetch(`https://api.github.com/search/repositories?q=user:1shubh+fork:true&sort=updated&per_page=10&type=Repositories`);
         let data = await res.json();
         setData(data.items)
     }
@@ -13,11 +13,10 @@ const ProjectsFolder = () => {
     useEffect(()=>{
         getData()
     },[])
-
   return (
     <>
     <Heading textAlign={"center"}>Projects</Heading>
-    <Box display="grid" gridTemplateColumns={"repeat(3,1fr)"} gap="20px" marginTop={"10px"}>
+    <Box display="grid" gridTemplateColumns={{lg:"repeat(3,1fr)",md:"repeat(2,1fr)",sm:"repeat(1,1fr)"}} gap="20px" marginTop={"10px"}>
       {data.map((ele)=>(
         <Link key={ele.id} href={ele.html_url}><Box backgroundColor={"orange"} border="0px solid black" padding={"20px"} borderRadius="10px">
             <Heading size={"md"}>{ele.name}</Heading>

@@ -1,12 +1,12 @@
 import Head from 'next/head'
 
-import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
+// import { Inter } from '@next/font/google'
+// import styles from '../styles/Home.module.css'
 import {Box,Button,Grid,Heading,Image,Text} from "@chakra-ui/react"
 import Link from "next/link"
 import ProjectsFolder from './projects'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home({portfolio}) {
   console.log(portfolio)
@@ -19,7 +19,7 @@ export default function Home({portfolio}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-           <Box display={"flex"} marginTop="10px" justifyContent={"space-around"}>
+           <Box display={{lg:"flex",md:"flex",sm:"grid"}} marginTop="10px" justifyContent={"space-around"}>
              <Grid border="0px solid black" w={"25%"} gap="10px">
                 <Box backgroundColor={"orange"} textAlign={"center"} border="0px solid black" borderRadius={"10px"} display="grid"  gap="10px" padding={"20px"}>
                    <Image margin={"auto"} w={"30%"} borderRadius="55%" src={portfolio.avatar_url} alt="avatar" />
